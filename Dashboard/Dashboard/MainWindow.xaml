@@ -1,0 +1,31 @@
+﻿<Window x:Name="Login" x:Class="Dashboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dashboard"
+        mc:Ignorable="d"
+        Title="Login" 
+        Height="500" 
+        Width="350"
+        ResizeMode="CanMinimize" WindowStyle="None">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" Background="#FF080D10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="testText" Foreground="#FFDCD8D8" MouseDown="click_DragWindow" Margin="5 2">Dashboard</Label>
+            <TextBlock x:Name="btnExit" Grid.Column="1" FontSize="18" FontWeight="Light" Padding="10 3" Foreground="#99FFFFFF" MouseLeftButtonUp="click_Exit" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="mouseEnter_Exit" MouseLeave="mouseLeave_Exit">X</TextBlock>
+
+        </Grid>
+        <Frame x:Name="FrameLoginRegister" Padding="30 20" NavigationUIVisibility="Hidden">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0E1419"/>
+                    <GradientStop Color="#FF141F27" Offset="1"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+        </Frame>
+    </DockPanel>
+</Window>
