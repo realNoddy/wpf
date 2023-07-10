@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Dashboard;
 
+
+
 namespace Dashboard
 {
     /// <summary>
@@ -22,10 +24,15 @@ namespace Dashboard
     public partial class LoginPage : Page
     {
         private Frame MainWindowFrame;
+        public Page RegisterPage = new Page();
         public LoginPage(Frame mainWindowFrame)
         {
             InitializeComponent();
-            MainWindowFrame = mainWindowFrame;
+            this.MainWindowFrame = mainWindowFrame;
+        }
+        public void SetSwitchPage(Page registerPage)
+        {
+            this.RegisterPage = registerPage;
         }
 
         private void click_btnLogin(object sender, RoutedEventArgs e)
@@ -35,7 +42,7 @@ namespace Dashboard
 
         private void click_switchToRegister(object sender, MouseButtonEventArgs e)
         {
-            MainWindowFrame.Content = new RegisterPage(MainWindowFrame);
+            MainWindowFrame.Content = this.RegisterPage;
         }
 
     }

@@ -16,7 +16,7 @@
                 <ColumnDefinition Width="30"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Label x:Name="testText" Foreground="#FFDCD8D8" MouseDown="click_DragWindow" Margin="5 2">Dashboard</Label>
-            <TextBlock x:Name="btnExit" Grid.Column="1" FontSize="18" FontWeight="Light" Padding="10 3" Foreground="#99FFFFFF" MouseLeftButtonUp="click_Exit" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="mouseEnter_Exit" MouseLeave="mouseLeave_Exit">X</TextBlock>
+            <TextBlock x:Name="btnExit" Grid.Column="1" FontSize="18" FontWeight="Light" Padding="10 3" Foreground="#99FFFFFF" MouseLeftButtonUp="click_Exit" MouseEnter="mouseEnter_Exit" MouseLeave="mouseLeave_Exit" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Margin="0,-5,0,0" Text="x"/>
 
         </Grid>
         <Frame x:Name="FrameLoginRegister" Padding="30 20" NavigationUIVisibility="Hidden">

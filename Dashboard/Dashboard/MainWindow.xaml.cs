@@ -18,12 +18,21 @@ namespace Dashboard
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    
     public partial class MainWindow : Window
     {
+        public LoginPage _loginPage;
+        public RegisterPage _registerPage;
         public MainWindow()
         {
             InitializeComponent();
-            FrameLoginRegister.Content = new LoginPage(FrameLoginRegister);
+            _loginPage = new LoginPage(FrameLoginRegister);
+            _registerPage = new RegisterPage(FrameLoginRegister);
+
+            _loginPage.SetSwitchPage(_registerPage);
+            _registerPage.SetSwitchPage(_loginPage);
+
+            FrameLoginRegister.Content = _loginPage;
         }
 
         private void click_Exit(object sender, MouseButtonEventArgs e)

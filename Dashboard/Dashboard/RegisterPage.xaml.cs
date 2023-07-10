@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Dashboard
 {
     /// <summary>
@@ -21,10 +22,15 @@ namespace Dashboard
     public partial class RegisterPage : Page
     {
         private Frame MainWindowFrame;
+        private Page LoginPage = new Page();
         public RegisterPage(Frame mainWindowFrame)
         {
             InitializeComponent();
-            MainWindowFrame = mainWindowFrame;
+            this.MainWindowFrame = mainWindowFrame;
+        }
+
+        public void SetSwitchPage(Page loginPage) {
+            this.LoginPage = loginPage;
         }
 
         private void click_btnRegister(object sender, RoutedEventArgs e)
@@ -33,7 +39,7 @@ namespace Dashboard
         }
         private void click_switchToLogin(object sender, MouseButtonEventArgs e)
         {
-            MainWindowFrame.Content = new LoginPage(MainWindowFrame);
+            MainWindowFrame.Content = this.LoginPage;
         }
 
         private void checkBox_Check(object sender, RoutedEventArgs e)
